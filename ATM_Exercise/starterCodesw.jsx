@@ -55,7 +55,7 @@ const Account = () => {
     <form onSubmit={handleSubmit}>
       <>
         <h2 id="total">{status}</h2>
-        <label>Select an action below to continue</label>
+        <label>Please select an action to continue</label>
         <select onChange={(e) => handleModeSelect(e)} name="mode" id="mode-select">
           <option id="no-selection" value=""></option>
           <option id="deposit-selection" value="Deposit">
@@ -72,7 +72,7 @@ const Account = () => {
             isValid={validTransaction}
           ></ATMDeposit>
         )}
-        
+
         {insuffcantFunds && (
           <p className="error">{insuffcantFunds}</p>
         )}
